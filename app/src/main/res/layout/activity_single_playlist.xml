@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_background_color"
+    tools:context=".activities.SinglePlaylistActivity">
+
+    <TextView
+        android:id="@+id/no_songs_available_single_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_songs_available_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/single_playlist_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ellipsize="marquee"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
+        android:singleLine="true"
+        android:text="@string/playlist_title"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/seekbar_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/single_playlist_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/single_playlist_title"
+        android:layout_above="@id/edit_playlist_button"/>
+
+        <Button
+            android:id="@+id/edit_playlist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/single_playlist_player_fragment_container_view"
+            android:paddingVertical="10dp"
+            android:text="@string/button_edit_playlist_text"
+            android:textStyle="bold"
+            android:textColor="@color/basic_background_color"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/single_playlist_player_fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:name="com.example.playerok.NowPlayingFragment" />
+
+</RelativeLayout>

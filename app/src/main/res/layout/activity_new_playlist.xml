@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewPlaylistActivity"
+    android:background="@color/basic_background_color">
+
+    <EditText
+        android:id="@+id/editable_title_of_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:hint="@string/enter_playlists_title"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:textColorHint="@color/seekbar_color"/>
+
+    <Button
+        android:id="@+id/ready_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:layout_below="@id/editable_title_of_playlist"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginVertical="5dp"
+        android:backgroundTint="@color/song_item_title_color" />
+
+    <TextView
+        android:id="@+id/choose_songs_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_songs_from_the_list_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/ready_button"
+        android:textColor="@color/song_item_title_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/new_playlist_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_songs_textview"
+        android:layout_above="@id/save_playlist_button"
+        android:paddingHorizontal="5dp" />
+
+    <Button
+        android:id="@+id/save_playlist_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginVertical="10dp"
+        android:backgroundTint="@color/song_item_title_color"
+        android:text="@string/save_playlist_button" />
+
+</RelativeLayout>

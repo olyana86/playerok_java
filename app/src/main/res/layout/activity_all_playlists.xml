@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AllPlaylistsActivity"
+    android:background="@color/basic_background_color">
+
+    <TextView
+        android:id="@+id/my_playlists_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_playlists"
+        android:textSize="20sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="5dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/song_item_title_color"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_of_playlists_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_playlists_title"
+        android:layout_above="@id/new_playlist_button"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp" />
+
+    <Button
+        android:id="@+id/new_playlist_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_playlist"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_background_color"
+    tools:context=".activities.EditablePlaylistActivity">
+
+    <EditText
+        android:id="@+id/existed_title_of_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:hint="@string/existed_playlist_title"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:textColorHint="@color/seekbar_color"/>
+
+    <Button
+        android:id="@+id/title_ready_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:layout_below="@id/existed_title_of_playlist"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginVertical="5dp"
+        android:backgroundTint="@color/song_item_title_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/editable_playlist_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_ready_button"
+        android:layout_above="@id/line_of_buttons_edit_and_delete"
+        android:paddingHorizontal="5dp" />
+
+    <LinearLayout
+        android:id="@+id/line_of_buttons_edit_and_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/save_edited_playlist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@color/song_item_title_color"
+            android:text="@string/save_button"
+            android:textStyle="bold"
+            android:textColor="@color/basic_background_color"/>
+
+        <Button
+            android:id="@+id/delete_playlist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="@string/delete_button"
+            android:textColor="@color/basic_background_color"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

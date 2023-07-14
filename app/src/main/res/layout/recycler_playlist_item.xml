@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/one_playlist_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/item_background_color"
+    android:paddingVertical="5dp">
+
+    <ImageView
+        android:id="@+id/playlist_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/pleerok_icon_green_white" />
+
+    <TextView
+        android:id="@+id/playlist_title_in_the_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/playlist_duration"
+        android:layout_toEndOf="@id/playlist_icon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="5dp"
+        android:text="@string/playlist_title_in_the_list"
+        android:textColor="@color/song_item_title_color"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total_amount_of_songs_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playlist_title_in_the_list"
+        android:layout_toEndOf="@id/playlist_icon"
+        android:text="Всего песен: "
+        android:paddingStart="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/seekbar_color"
+        android:layout_toStartOf="@id/playlist_duration"/>
+
+    <TextView
+        android:id="@+id/playlist_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingHorizontal="5dp"
+        android:text="0:00"
+        android:textColor="@color/seekbar_color" />
+
+</RelativeLayout>
