@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ed_one_song_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/item_background_color"
+    android:paddingVertical="4dp">
+
+    <CheckBox
+        android:id="@+id/ed_song_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:textColorHint="@color/buttons_color"/>
+
+    <TextView
+        android:id="@+id/ed_song_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/ed_song_duration"
+        android:layout_toEndOf="@id/ed_song_checkbox"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="4dp"
+        android:text="Song title"
+        android:textColor="@color/song_item_title_color"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ed_song_artist_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_song_title_text"
+        android:layout_toStartOf="@id/ed_song_duration"
+        android:layout_toEndOf="@id/ed_song_checkbox"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="4dp"
+        android:text="Song artist"
+        android:textColor="@color/song_item_title_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ed_song_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingHorizontal="4dp"
+        android:text="0:00" />
+
+</RelativeLayout>
